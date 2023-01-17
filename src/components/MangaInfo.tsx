@@ -18,9 +18,7 @@ export default function MangaInfo({ currentManga }: TProps) {
       >
         {currentManga.title}
       </a>
-      {currentManga.score && (
-        <span className="text-2xl">Score: {currentManga.score}</span>
-      )}
+      <span className="text-2xl">Score: {currentManga.score ?? "??"}</span>
       <Image
         width={192}
         height={273}
