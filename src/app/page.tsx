@@ -21,7 +21,8 @@ export default function Home() {
 
   return (
     <main>
-      <MangaInfo currentManga={currentManga} />
+      {currentManga && <MangaInfo currentManga={currentManga} />}
+      <div className="mb-6" />
       <Button onClick={getRandomManga} />
     </main>
   );
