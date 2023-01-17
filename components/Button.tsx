@@ -13,7 +13,7 @@ export default function Button(props: IProps) {
     <button
       className={cn(
         props.className,
-        "bg-blue-600 text-blue-300 hover:text-yellow-50 text-3xl rounded-md px-4 py-4"
+        "bg-blue-600 text-blue-300 hover:text-yellow-50 text-4xl rounded-md px-4 py-4"
       )}
       {...props}
     >
