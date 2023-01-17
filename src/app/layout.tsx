@@ -1,4 +1,8 @@
 import "./globals.css";
+import localFont from "@next/font/local";
+import cn from "clsx";
+
+const Tanker = localFont({ src: "../../public/fonts/Tanker.woff2" });
 
 export default function RootLayout({
   children,
@@ -8,7 +12,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body
+        className={cn(
+          Tanker.className,
+          "flex bg-[#0B0C10] w-screen h-screen items-center justify-center"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
