@@ -1,8 +1,8 @@
 "use client";
 
-import Button from "@/components/Button";
-import MangaInfo from "@/components/MangaInfo";
-import { Data, Manga } from "@/types/Manga";
+import Button from "components/Button";
+import MangaInfo from "components/MangaInfo";
+import { Data, Manga } from "types/Manga";
 import { useState } from "react";
 
 export default function Home() {
