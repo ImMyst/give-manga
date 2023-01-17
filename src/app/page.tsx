@@ -13,8 +13,6 @@ export default function Home() {
     const data = res.json();
     const mangaData: Manga = await data;
 
-    console.log(mangaData.data);
-
     if (!mangaData) return;
     setCurrentManga(mangaData.data);
   };
