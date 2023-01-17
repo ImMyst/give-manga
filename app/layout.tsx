@@ -2,7 +2,7 @@ import "./globals.css";
 import localFont from "@next/font/local";
 import cn from "clsx";
 
-const Tanker = localFont({ src: "../../public/fonts/Tanker.woff2" });
+const Tanker = localFont({ src: "../public/fonts/Tanker.woff2" });
 
 export default function RootLayout({
   children,
