@@ -1,13 +1,28 @@
+"use client";
+
+import Button from "@/components/Button";
 import MangaInfo from "@/components/MangaInfo";
-import Inter from "@next/font/google";
+import { Data, Manga } from "@/types/Manga";
+import { useState } from "react";
 
 export default function Home() {
+  const [currentManga, setCurrentManga] = useState<Data | null>(null);
+
+  const getRandomManga = async () => {
+    const res = await fetch("https://api.jikan.moe/v4/random/manga");
+    const data = res.json();
+    const mangaData: Manga = await data;
+
+    console.log(mangaData.data);
+
+    if (!mangaData) return;
+    setCurrentManga(mangaData.data);
+  };
+
   return (
     <main>
-      <MangaInfo />
-      <button className="bg-blue-600 text-blue-300 hover:text-yellow-50 text-3xl rounded-md px-4 py-4">
-        Give me a manga!
-      </button>
+      <MangaInfo currentManga={currentManga} />
+      <Button onClick={getRandomManga} />
     </main>
   );
 }
