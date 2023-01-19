@@ -15,7 +15,7 @@ export default function RootLayout({
       <body
         className={cn(
           Tanker.className,
-          "flex bg-[#0B0C10] text-center text-yellow-50 w-screen h-screen items-center justify-center"
+          "flex bg-[#0B0C10] text-center text-yellow-50 w-screen max-w-3xl m-auto h-screen items-center justify-center"
         )}
       >
         {children}

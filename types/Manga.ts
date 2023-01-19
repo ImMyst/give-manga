@@ -48,6 +48,7 @@ export interface Published {
   from: string;
   to: string;
   prop: Prop;
+  string: string;
 }
 export interface Prop {
   from: FromOrTo;

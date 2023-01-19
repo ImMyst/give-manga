@@ -8,6 +8,31 @@ type TProps = {
 };
 
 export default function MangaInfo({ currentManga }: TProps) {
+  const publishingYears = `${new Date(
+    currentManga.published.from
+  ).getFullYear()}
+    - ${
+      currentManga.published.to
+        ? new Date(currentManga.published.to).getFullYear()
+        : "?"
+    }`;
+
+  const genres =
+    currentManga.genres && currentManga.genres.length > 0 ? (
+      currentManga.genres.map((genre, index) => (
+        <span className="text-yellow-200" key={index}>
+          {(index ? ", " : "") + genre.name}
+        </span>
+      ))
+    ) : (
+      <span className="text-yellow-200">?</span>
+    );
+
+  const firstDemographic =
+    currentManga.demographics && currentManga.demographics.length > 0
+      ? currentManga.demographics[0].name
+      : "?";
+
   return (
     <div className="flex flex-col space-y-4 items-center justify-center">
       <a
@@ -18,7 +43,20 @@ export default function MangaInfo({ currentManga }: TProps) {
       >
         {currentManga.title}
       </a>
-      <span className="text-2xl">Score: {currentManga.score ?? "??"}</span>
+      <section className="text-3xl flex max-w-xs text-center whitespace-nowrap justify-center items-center flex-col">
+        <span>
+          Score :{" "}
+          <span className="text-yellow-200">{currentManga.score ?? "?"}</span>
+        </span>
+        <span>
+          Years : <span className="text-yellow-200">{publishingYears}</span>
+        </span>
+        <span>Genres : {genres}</span>
+        <span>
+          Demographic :{" "}
+          <span className="text-yellow-200">{firstDemographic}</span>
+        </span>
+      </section>
       <Image
         width={192}
         height={273}
