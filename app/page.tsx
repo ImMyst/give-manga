@@ -23,7 +23,6 @@ export default function Home() {
     <>
       {currentManga && (
         <>
-          <div className="mb-6" />
           <MangaInfo currentManga={currentManga} />
         </>
       )}

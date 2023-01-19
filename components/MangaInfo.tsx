@@ -2,6 +2,7 @@
 
 import { Data } from "types/Manga";
 import Image from "next/image";
+import { truncate } from "utils/truncate";
 
 type TProps = {
   currentManga: Data;
@@ -41,7 +42,7 @@ export default function MangaInfo({ currentManga }: TProps) {
         target={"_blank"}
         className="text-6xl hover:underline decoration-blue-600 transition-all"
       >
-        {currentManga.title}
+        {truncate(currentManga.title, 53)}
       </a>
       <section className="text-3xl flex max-w-xs text-center whitespace-nowrap justify-center items-center flex-col">
         <span>

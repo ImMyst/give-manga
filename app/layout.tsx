@@ -16,7 +16,7 @@ export default function RootLayout({
         <main
           className={cn(
             Tanker.className,
-            "bg-[#0B0C10 relative flex-col space-y-6 flex text-center text-yellow-50 w-screen max-w-3xl m-auto h-screen items-center justify-center"
+            "bg-[#0B0C10 relative flex-col overflow-auto p-4 space-y-6 flex text-center text-yellow-50 w-screen max-w-3xl m-auto h-screen items-center justify-center"
           )}
         >
           {children}
