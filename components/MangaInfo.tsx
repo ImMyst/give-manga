@@ -61,7 +61,7 @@ export default function MangaInfo({ currentManga }: TProps) {
       <Image
         width={192}
         height={273}
-        className="w-auto rounded-xl"
+        className="w-auto border-2 border-yellow-50 rounded-xl"
         alt={currentManga.title}
         src={currentManga?.images.jpg.large_image_url}
       />
