@@ -4,7 +4,6 @@ import Button from "components/Button";
 import MangaInfo from "components/MangaInfo";
 import { Data, Manga } from "types/Manga";
 import { useState } from "react";
-import Link from "next/link";
 import About from "components/About";
 
 export default function Home() {
@@ -21,11 +20,7 @@ export default function Home() {
 
   return (
     <>
-      {currentManga && (
-        <>
-          <MangaInfo currentManga={currentManga} />
-        </>
-      )}
+      {currentManga && <MangaInfo currentManga={currentManga} />}
       <Button onClick={getRandomManga} />
       <About />
     </>

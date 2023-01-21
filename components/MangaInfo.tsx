@@ -1,5 +1,3 @@
-"use client";
-
 import { Data } from "types/Manga";
 import Image from "next/image";
 import { truncate } from "utils/truncate";

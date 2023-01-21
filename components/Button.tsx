@@ -1,5 +1,3 @@
-"use client";
-
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import cn from "clsx";
 

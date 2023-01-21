@@ -1,5 +1,3 @@
-"use client";
-
 export default function About() {
   return (
     <section className="flex space-x-1 items-center text-xs text-gray-400">
