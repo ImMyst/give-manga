@@ -41,109 +41,109 @@ export interface AnimeData {
   demographics: Demographic[];
 }
 
-export interface Images {
+interface Images {
   jpg: Jpg;
   webp: Webp;
 }
 
-export interface Jpg {
+interface Jpg {
   image_url: string;
   small_image_url: string;
   large_image_url: string;
 }
 
-export interface Webp {
+interface Webp {
   image_url: string;
   small_image_url: string;
   large_image_url: string;
 }
 
-export interface Trailer {
+interface Trailer {
   youtube_id: string;
   url: string;
   embed_url: string;
 }
 
-export interface Title {
+interface Title {
   type: string;
   title: string;
 }
 
-export interface Aired {
+interface Aired {
   from: string;
   to: string;
   string: string;
   prop: Prop;
 }
 
-export interface Prop {
+interface Prop {
   from: From;
   to: To;
   string: string;
 }
 
-export interface From {
+interface From {
   day: number;
   month: number;
   year: number;
 }
 
-export interface To {
+interface To {
   day: number;
   month: number;
   year: number;
 }
 
-export interface Broadcast {
+interface Broadcast {
   day: string;
   time: string;
   timezone: string;
   string: string;
 }
 
-export interface Producer {
+interface Producer {
   mal_id: number;
   type: string;
   name: string;
   url: string;
 }
 
-export interface Licensor {
+interface Licensor {
   mal_id: number;
   type: string;
   name: string;
   url: string;
 }
 
-export interface Studio {
+interface Studio {
   mal_id: number;
   type: string;
   name: string;
   url: string;
 }
 
-export interface Genre {
+interface Genre {
   mal_id: number;
   type: string;
   name: string;
   url: string;
 }
 
-export interface ExplicitGenre {
+interface ExplicitGenre {
   mal_id: number;
   type: string;
   name: string;
   url: string;
 }
 
-export interface Theme {
+interface Theme {
   mal_id: number;
   type: string;
   name: string;
   url: string;
 }
 
-export interface Demographic {
+interface Demographic {
   mal_id: number;
   type: string;
   name: string;

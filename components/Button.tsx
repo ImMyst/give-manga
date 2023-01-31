@@ -1,5 +1,5 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import cn from "clsx";
+import type { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
 interface IProps
   extends DetailedHTMLProps<

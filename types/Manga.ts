@@ -31,31 +31,31 @@ export interface MangaData {
   themes?: AllTypes[] | null;
   demographics?: AllTypes[] | null;
 }
-export interface Images {
+interface Images {
   jpg: JpgOrWebp;
   webp: JpgOrWebp;
 }
-export interface JpgOrWebp {
+interface JpgOrWebp {
   image_url: string;
   small_image_url: string;
   large_image_url: string;
 }
-export interface TitlesEntity {
+interface TitlesEntity {
   type: string;
   title: string;
 }
-export interface Published {
+interface Published {
   from: string;
   to: string;
   prop: Prop;
   string: string;
 }
-export interface Prop {
+interface Prop {
   from: FromOrTo;
   to: FromOrTo;
   string: string;
 }
-export interface FromOrTo {
+interface FromOrTo {
   day: number;
   month: number;
   year: number;

@@ -1,10 +1,9 @@
 "use client";
 
 import Button from "components/Button";
-import { AnimeData, Anime } from "types/Anime";
 import { useState } from "react";
-import About from "components/About";
 import AnimeInfo from "components/AnimeInfo";
+import type { AnimeData, Anime } from "types/Anime";
 
 export default function Home() {
   const [currentAnime, setCurrentAnime] = useState<AnimeData | null>(null);
