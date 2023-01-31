@@ -24,7 +24,6 @@ export default function Home() {
       <Button isAnime={true} onClick={getRandomManga}>
         Give me an Anime!
       </Button>
-      <About />
     </>
   );
 }

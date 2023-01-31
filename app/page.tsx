@@ -22,7 +22,6 @@ export default function Home() {
     <>
       {currentManga && <MangaInfo currentManga={currentManga} />}
       <Button onClick={getRandomManga}>Give me a Manga!</Button>
-      <About />
     </>
   );
 }
