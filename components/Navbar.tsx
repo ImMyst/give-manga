@@ -13,7 +13,7 @@ export default function Navbar() {
       <Link
         className={cn(
           IS_ANIME ? "decoration-blue-600" : "decoration-orange-600",
-          "text-gray-200 text-xl hover:underline hover:text-yellow-50"
+          "text-gray-200 text-2xl hover:underline hover:text-yellow-50"
         )}
         href={IS_ANIME ? "/" : "/anime"}
       >
