@@ -1,7 +1,7 @@
 export interface Manga {
-  data: Data;
+  data: MangaData;
 }
-export interface Data {
+export interface MangaData {
   mal_id: number;
   url: string;
   images: Images;

@@ -1,24 +1,22 @@
-import { MangaData } from "types/Manga";
+import { AnimeData } from "types/Anime";
 import Image from "next/image";
 import { truncate } from "utils/truncate";
 
 type TProps = {
-  currentManga: MangaData;
+  currentAnime: AnimeData;
 };
 
-export default function MangaInfo({ currentManga }: TProps) {
-  const publishingYears = `${new Date(
-    currentManga.published.from
-  ).getFullYear()}
+export default function AnimeInfo({ currentAnime }: TProps) {
+  const publishingYears = `${new Date(currentAnime.aired.from).getFullYear()}
     - ${
-      currentManga.published.to
-        ? new Date(currentManga.published.to).getFullYear()
+      currentAnime.aired.to
+        ? new Date(currentAnime.aired.to).getFullYear()
         : "?"
     }`;
 
   const genres =
-    currentManga.genres && currentManga.genres.length > 0 ? (
-      currentManga.genres.map((genre, index) => (
+    currentAnime.genres && currentAnime.genres.length > 0 ? (
+      currentAnime.genres.map((genre, index) => (
         <span className="text-yellow-200" key={index}>
           {(index ? ", " : "") + genre.name}
         </span>
@@ -28,28 +26,28 @@ export default function MangaInfo({ currentManga }: TProps) {
     );
 
   const firstDemographic =
-    currentManga.demographics && currentManga.demographics.length > 0
-      ? currentManga.demographics[0].name
+    currentAnime.demographics && currentAnime.demographics.length > 0
+      ? currentAnime.demographics[0].name
       : "?";
 
   return (
     <div className="flex flex-col space-y-4 items-center justify-center">
       <a
-        href={currentManga.url}
+        href={currentAnime.url}
         rel="noreferrer"
         target={"_blank"}
-        className="text-6xl hover:underline decoration-blue-600 transition-all"
+        className="text-6xl hover:underline decoration-orange-600 transition-all"
       >
-        {truncate(currentManga.title, 53)}
+        {truncate(currentAnime.title, 53)}
       </a>
       <section className="text-3xl flex max-w-xs text-center whitespace-nowrap justify-center items-center flex-col">
         <span>
           Score :{" "}
-          <span className="text-yellow-200">{currentManga.score ?? "?"}</span>
+          <span className="text-yellow-200">{currentAnime.score ?? "?"}</span>
         </span>
         <span>
           Type :{" "}
-          <span className="text-yellow-200">{currentManga.type ?? "?"}</span>
+          <span className="text-yellow-200">{currentAnime.type ?? "?"}</span>
         </span>
         <span>
           Years : <span className="text-yellow-200">{publishingYears}</span>
@@ -64,8 +62,8 @@ export default function MangaInfo({ currentManga }: TProps) {
         width={192}
         height={273}
         className="w-auto border-2 border-yellow-50 rounded-xl"
-        alt={currentManga.title}
-        src={currentManga?.images.jpg.large_image_url}
+        alt={currentAnime.title}
+        src={currentAnime?.images.jpg.large_image_url}
       />
     </div>
   );

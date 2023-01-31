@@ -2,12 +2,12 @@
 
 import Button from "components/Button";
 import MangaInfo from "components/MangaInfo";
-import { Data, Manga } from "types/Manga";
+import { MangaData, Manga } from "types/Manga";
 import { useState } from "react";
 import About from "components/About";
 
 export default function Home() {
-  const [currentManga, setCurrentManga] = useState<Data | null>(null);
+  const [currentManga, setCurrentManga] = useState<MangaData | null>(null);
 
   const getRandomManga = async () => {
     const res = await fetch("https://api.jikan.moe/v4/random/manga");
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       {currentManga && <MangaInfo currentManga={currentManga} />}
-      <Button onClick={getRandomManga} />
+      <Button onClick={getRandomManga}>Give me a Manga!</Button>
       <About />
     </>
   );
