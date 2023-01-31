@@ -12,9 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[#0B0C10]">
       <head />
-      <body className="bg-[#0B0C10]">
+      <body>
         <main
           className={cn(
             Tanker.className,
