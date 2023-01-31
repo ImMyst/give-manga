@@ -48,6 +48,10 @@ export default function MangaInfo({ currentManga }: TProps) {
           <span className="text-yellow-200">{currentManga.score ?? "?"}</span>
         </span>
         <span>
+          Type :{" "}
+          <span className="text-yellow-200">{currentManga.type ?? "?"}</span>
+        </span>
+        <span>
           Years : <span className="text-yellow-200">{publishingYears}</span>
         </span>
         <span>Genres : {genres}</span>
