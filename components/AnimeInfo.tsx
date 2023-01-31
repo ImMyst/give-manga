@@ -7,13 +7,6 @@ type TProps = {
 };
 
 export default function AnimeInfo({ currentAnime }: TProps) {
-  const publishingYears = `${new Date(currentAnime.aired.from).getFullYear()}
-    - ${
-      currentAnime.aired.to
-        ? new Date(currentAnime.aired.to).getFullYear()
-        : "?"
-    }`;
-
   const genres =
     currentAnime.genres && currentAnime.genres.length > 0 ? (
       currentAnime.genres.map((genre, index) => (
@@ -50,7 +43,8 @@ export default function AnimeInfo({ currentAnime }: TProps) {
           <span className="text-yellow-200">{currentAnime.type ?? "?"}</span>
         </span>
         <span>
-          Years : <span className="text-yellow-200">{publishingYears}</span>
+          Aired :{" "}
+          <span className="text-yellow-200">{currentAnime.aired.string}</span>
         </span>
         <span>Genres : {genres}</span>
         <span>

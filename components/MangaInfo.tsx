@@ -7,15 +7,6 @@ type TProps = {
 };
 
 export default function MangaInfo({ currentManga }: TProps) {
-  const publishingYears = `${new Date(
-    currentManga.published.from
-  ).getFullYear()}
-    - ${
-      currentManga.published.to
-        ? new Date(currentManga.published.to).getFullYear()
-        : "?"
-    }`;
-
   const genres =
     currentManga.genres && currentManga.genres.length > 0 ? (
       currentManga.genres.map((genre, index) => (
@@ -52,7 +43,10 @@ export default function MangaInfo({ currentManga }: TProps) {
           <span className="text-yellow-200">{currentManga.type ?? "?"}</span>
         </span>
         <span>
-          Years : <span className="text-yellow-200">{publishingYears}</span>
+          Published :{" "}
+          <span className="text-yellow-200">
+            {currentManga.published.string}
+          </span>
         </span>
         <span>Genres : {genres}</span>
         <span>

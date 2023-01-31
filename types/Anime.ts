@@ -72,6 +72,7 @@ export interface Title {
 export interface Aired {
   from: string;
   to: string;
+  string: string;
   prop: Prop;
 }
 
