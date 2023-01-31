@@ -14,8 +14,6 @@ export default function Home() {
     const data = res.json();
     const animeData: Anime = await data;
 
-    console.log(animeData.data);
-
     if (!animeData) return;
     setCurrentAnime(animeData.data);
   };
@@ -23,7 +21,7 @@ export default function Home() {
   return (
     <>
       {currentAnime && <AnimeInfo currentAnime={currentAnime} />}
-      <Button isAnime onClick={getRandomManga}>
+      <Button isAnime={true} onClick={getRandomManga}>
         Give me an Anime!
       </Button>
       <About />
