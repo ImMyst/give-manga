@@ -25,6 +25,7 @@ export default function About() {
       >
         ImMyst
       </a>
+      <span>- {new Date().getFullYear()}</span>
     </section>
   );
 }

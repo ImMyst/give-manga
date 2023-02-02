@@ -1,7 +1,7 @@
 import "./globals.css";
 import localFont from "@next/font/local";
 import cn from "clsx";
-import About from "components/About";
+import Footer from "components/Footer";
 import Navbar from "components/Navbar";
 
 const Tanker = localFont({ src: "../public/fonts/Tanker.woff2" });
@@ -23,7 +23,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          <About />
+          <Footer />
         </main>
       </body>
     </html>
