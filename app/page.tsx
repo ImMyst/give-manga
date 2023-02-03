@@ -3,8 +3,8 @@
 import Button from "@/components/Button";
 import MangaInfo from "@/components/MangaInfo";
 import { useState } from "react";
-import type { MangaData, Manga } from "@/types/Manga";
 import { isGenreIncluded } from "@/utils/isGenreIncluded";
+import type { MangaData, Manga } from "@/types/Manga";
 
 export default function Home() {
   const [currentManga, setCurrentManga] = useState<MangaData | null>(null);

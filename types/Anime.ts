@@ -1,4 +1,4 @@
-import { AllTypes } from "./Common";
+import { AllTypes, Genres } from "@/types/Common";
 
 export interface Anime {
   data: AnimeData;
@@ -37,7 +37,7 @@ export interface AnimeData {
   producers: AllTypes[];
   licensors: AllTypes[];
   studios: AllTypes[];
-  genres: AllTypes[];
+  genres: Genres[];
   explicit_genres: AllTypes[];
   themes: AllTypes[];
   demographics: AllTypes[];

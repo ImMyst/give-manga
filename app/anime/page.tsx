@@ -3,8 +3,8 @@
 import Button from "@/components/Button";
 import { useState } from "react";
 import AnimeInfo from "@/components/AnimeInfo";
-import type { AnimeData, Anime } from "@/types/Anime";
 import { isGenreIncluded } from "@/utils/isGenreIncluded";
+import type { AnimeData, Anime } from "@/types/Anime";
 
 export default function Home() {
   const [currentAnime, setCurrentAnime] = useState<AnimeData | null>(null);

@@ -1,4 +1,4 @@
-import { AllTypes } from "./Common";
+import { AllTypes, Genres } from "@/types/Common";
 
 export interface Manga {
   data: MangaData;
@@ -28,7 +28,7 @@ export interface MangaData {
   background: string;
   authors?: AllTypes[] | null;
   serializations?: AllTypes[] | null;
-  genres?: AllTypes[] | null;
+  genres?: Genres[] | null;
   explicit_genres?: AllTypes[] | null;
   themes?: AllTypes[] | null;
   demographics?: AllTypes[] | null;

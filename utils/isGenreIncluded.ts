@@ -1,8 +1,8 @@
-import { AllTypes } from "@/types/Common";
+import { Genres, GenreName } from "@/types/Common";
 
 export const isGenreIncluded = (
-  genres: AllTypes[] | undefined | null,
-  genreToExclude: string[]
+  genres: Genres[] | undefined | null,
+  genreToExclude: GenreName[]
 ) => {
   return genres
     ? genres.every((genre) => genreToExclude.includes(genre.name))
