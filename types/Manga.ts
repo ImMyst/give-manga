@@ -1,3 +1,5 @@
+import { AllTypes } from "./Common";
+
 export interface Manga {
   data: MangaData;
 }
@@ -59,10 +61,4 @@ interface FromOrTo {
   day: number;
   month: number;
   year: number;
-}
-export interface AllTypes {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
 }

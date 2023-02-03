@@ -1,3 +1,5 @@
+import { AllTypes } from "./Common";
+
 export interface Anime {
   data: AnimeData;
 }
@@ -32,13 +34,13 @@ export interface AnimeData {
   season: string;
   year: number;
   broadcast: Broadcast;
-  producers: Producer[];
-  licensors: Licensor[];
-  studios: Studio[];
-  genres: Genre[];
-  explicit_genres: ExplicitGenre[];
-  themes: Theme[];
-  demographics: Demographic[];
+  producers: AllTypes[];
+  licensors: AllTypes[];
+  studios: AllTypes[];
+  genres: AllTypes[];
+  explicit_genres: AllTypes[];
+  themes: AllTypes[];
+  demographics: AllTypes[];
 }
 
 interface Images {
@@ -99,53 +101,4 @@ interface Broadcast {
   time: string;
   timezone: string;
   string: string;
-}
-
-interface Producer {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
-}
-
-interface Licensor {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
-}
-
-interface Studio {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
-}
-
-interface Genre {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
-}
-
-interface ExplicitGenre {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
-}
-
-interface Theme {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
-}
-
-interface Demographic {
-  mal_id: number;
-  type: string;
-  name: string;
-  url: string;
 }

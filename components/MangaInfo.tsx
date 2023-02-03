@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { truncate } from "utils/truncate";
-import type { MangaData } from "types/Manga";
+import { truncate } from "@/utils/truncate";
+import type { MangaData } from "@/types/Manga";
 
 type TProps = {
   currentManga: MangaData;

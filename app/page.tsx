@@ -1,9 +1,10 @@
 "use client";
 
-import Button from "components/Button";
-import MangaInfo from "components/MangaInfo";
+import Button from "@/components/Button";
+import MangaInfo from "@/components/MangaInfo";
 import { useState } from "react";
-import type { MangaData, Manga } from "types/Manga";
+import type { MangaData, Manga } from "@/types/Manga";
+import { isGenreIncluded } from "@/utils/isGenreIncluded";
 
 export default function Home() {
   const [currentManga, setCurrentManga] = useState<MangaData | null>(null);
@@ -14,7 +15,13 @@ export default function Home() {
     const mangaData: Manga = await data;
 
     if (!mangaData) return;
-    setCurrentManga(mangaData.data);
+
+    // Re run getRandomManga if genre is hentai
+    if (!isGenreIncluded(mangaData.data?.genres, ["Hentai"])) {
+      setCurrentManga(mangaData.data);
+    } else {
+      await getRandomManga();
+    }
   };
 
   return (

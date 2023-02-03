@@ -1,8 +1,8 @@
 import "./globals.css";
 import localFont from "@next/font/local";
 import cn from "clsx";
-import Footer from "components/Footer";
-import Navbar from "components/Navbar";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Tanker = localFont({ src: "../public/fonts/Tanker.woff2" });
 

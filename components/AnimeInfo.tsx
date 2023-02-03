@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { truncate } from "utils/truncate";
-import type { AnimeData } from "types/Anime";
+import type { AnimeData } from "@/types/Anime";
 
 type TProps = {
   currentAnime: AnimeData;
