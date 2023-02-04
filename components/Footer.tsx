@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="flex space-x-1 items-center text-xs text-gray-400">
+    <footer className="flex space-x-1 items-center text-xs text-gray-400 h-full py-3">
       <span>Made with</span>
       <svg
         className="fill-red-600 w-4"
@@ -26,6 +26,6 @@ export default function About() {
         ImMyst
       </a>
       <span>- {new Date().getFullYear()}</span>
-    </section>
+    </footer>
   );
 }
