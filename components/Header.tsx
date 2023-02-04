@@ -9,7 +9,7 @@ export default function Navbar() {
   const IS_ANIME = pathname?.includes("anime");
 
   return (
-    <nav>
+    <div className="w-full h-full py-6">
       <Link
         className={cn(
           IS_ANIME ? "decoration-blue-600" : "decoration-orange-600",
@@ -24,6 +24,6 @@ export default function Navbar() {
           <span className="text-orange-300">Anime</span>
         )}
       </Link>
-    </nav>
+    </div>
   );
 }
