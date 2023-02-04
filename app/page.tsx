@@ -4,19 +4,15 @@ import Button from "@/components/Button";
 import MangaInfo from "@/components/MangaInfo";
 import { useState } from "react";
 import { isGenreIncluded } from "@/utils/isGenreIncluded";
-import type { MangaData, Manga } from "@/types/Manga";
+import { getRandom } from "@/utils/getRandom";
+import type { MangaData } from "@/types/Manga";
 
 export default function Home() {
   const [currentManga, setCurrentManga] = useState<MangaData | null>(null);
 
   const getRandomManga = async () => {
-    const res = await fetch("https://api.jikan.moe/v4/random/manga");
-    const data = res.json();
-    const mangaData: Manga = await data;
+    const mangaData = await getRandom("manga");
 
-    if (!mangaData) return;
-
-    // Re run getRandomManga if genre is hentai
     if (!isGenreIncluded(mangaData.data?.genres, ["Hentai"])) {
       setCurrentManga(mangaData.data);
     } else {
