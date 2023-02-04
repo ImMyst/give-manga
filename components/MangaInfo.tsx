@@ -8,15 +8,11 @@ type TProps = {
 
 export default function MangaInfo({ currentManga }: TProps) {
   const genres =
-    currentManga.genres && currentManga.genres.length > 0 ? (
-      currentManga.genres.map((genre, index) => (
-        <span className="text-yellow-200" key={index}>
-          {(index ? ", " : "") + genre.name}
-        </span>
-      ))
-    ) : (
-      <span className="text-yellow-200">?</span>
-    );
+    currentManga.genres && currentManga.genres.length > 0
+      ? currentManga.genres
+          .map((genre, index) => (index ? ", " : "") + genre.name)
+          .join("")
+      : "?";
 
   const firstDemographic =
     currentManga.demographics && currentManga.demographics.length > 0
@@ -33,7 +29,7 @@ export default function MangaInfo({ currentManga }: TProps) {
       >
         {truncate(currentManga.title, 53)}
       </a>
-      <section className="text-3xl flex max-w-xs text-center whitespace-nowrap justify-center items-center flex-col">
+      <section className="text-3xl flex md:max-w-md max-w-sm text-center justify-center items-center flex-col">
         <span>
           Score :{" "}
           <span className="text-yellow-200">{currentManga.score ?? "?"}</span>
@@ -48,7 +44,9 @@ export default function MangaInfo({ currentManga }: TProps) {
             {currentManga.published.string}
           </span>
         </span>
-        <span>Genres : {genres}</span>
+        <span className="whitespace-wrap">
+          Genres : <span className="text-yellow-200">{genres}</span>
+        </span>
         <span>
           Demographic :{" "}
           <span className="text-yellow-200">{firstDemographic}</span>
