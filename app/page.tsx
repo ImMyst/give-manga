@@ -1,8 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Button from "@/components/Button";
 import MangaInfo from "@/components/MangaInfo";
-import { useState } from "react";
 import { isGenreIncluded } from "@/utils/isGenreIncluded";
 import { getRandom } from "@/utils/getRandom";
 import type { MangaData } from "@/types/Manga";

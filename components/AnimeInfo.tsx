@@ -53,6 +53,7 @@ export default function AnimeInfo({ currentAnime }: TProps) {
         </span>
       </section>
       <Image
+        priority
         width={192}
         height={273}
         className="w-auto border-2 border-yellow-50 rounded-xl"

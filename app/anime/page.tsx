@@ -1,11 +1,11 @@
 "use client";
 
-import Button from "@/components/Button";
 import { useState } from "react";
+import Button from "@/components/Button";
 import AnimeInfo from "@/components/AnimeInfo";
 import { isGenreIncluded } from "@/utils/isGenreIncluded";
-import type { AnimeData } from "@/types/Anime";
 import { getRandom } from "@/utils/getRandom";
+import type { AnimeData } from "@/types/Anime";
 
 export default function Home() {
   const [currentAnime, setCurrentAnime] = useState<AnimeData | null>(null);

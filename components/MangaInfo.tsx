@@ -27,7 +27,7 @@ export default function MangaInfo({ currentManga }: TProps) {
         target={"_blank"}
         className="text-6xl hover:underline decoration-blue-600 transition-all"
       >
-        {truncate(currentManga.title, 53)}
+        {truncate(currentManga.title ?? "", 53)}
       </a>
       <section className="text-3xl flex md:max-w-md max-w-sm text-center justify-center items-center flex-col">
         <span>
@@ -53,11 +53,15 @@ export default function MangaInfo({ currentManga }: TProps) {
         </span>
       </section>
       <Image
+        priority
         width={192}
         height={273}
         className="w-auto border-2 border-yellow-50 rounded-xl"
-        alt={currentManga.title}
-        src={currentManga?.images.jpg.large_image_url}
+        alt={currentManga.title ?? "Cat"}
+        src={
+          currentManga.images.jpg.large_image_url ??
+          "https://placekitten.com/200/300"
+        }
       />
     </div>
   );

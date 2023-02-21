@@ -1,4 +1,4 @@
-export default function About() {
+export default function Footer() {
   return (
     <footer className="flex space-x-1 items-center text-xs text-gray-400 h-full py-3">
       <span>Made with</span>

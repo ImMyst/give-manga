@@ -12,6 +12,9 @@ const nextConfig = {
       {
         hostname: "cdn.myanimelist.net",
       },
+      {
+        hostname: "placekitten.com",
+      },
     ],
   },
 };

@@ -1,6 +1,6 @@
 import "./globals.css";
-import localFont from "@next/font/local";
 import cn from "clsx";
+import localFont from "@next/font/local";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
